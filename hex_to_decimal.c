@@ -2,10 +2,8 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main()
+int hex_to_decimal(char *input)
 {
-    char input[] = "25";
-
     int length;
     for (length = 0; input[length] != '\0'; ++length);
 
@@ -81,6 +79,13 @@ int main()
 
         decimal_val += decimal_buffer[i];
     }
+
+    return decimal_val;
+}
+
+int main()
+{
+    int decimal_val = hex_to_decimal( "7CF");
 
     printf("%d", decimal_val);
 
